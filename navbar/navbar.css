@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F1f5f8;
+    
+}
+header{
+    background-color: white;
+    height: 60px;
+    width: 100vw;
+    box-shadow: 0 0px 20px rgba(0, 0, 0,0.2);
+    
+    
+}
+.header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding-left:10px;
+    background-color: white;
+}
+.logo{
+    max-width:210px;
+    
+    
+    
+    
+}
+.logo .logo1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    color: black;
+    font-weight: lighter;
+    font-size:25px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+}
+.logo .logo1 span{
+    color: rgb(59, 125, 248);
+    text-shadow:0 3px 5px rgba(0, 0, 0, 0.6);
+    font-weight: lighter;
+    font-size: 25px;
+    
+
+}
+.links1{
+    display: flex;
+    
+
+}
+.links1 li{
+    list-style: none;
+}
+.links1 li a{
+    text-decoration: none;
+    padding-right:20px;
+    font-size:18px;
+    letter-spacing:2px;
+    color: rgba(0, 0, 0, 0.733);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+
+}
+.links1 li a:hover{
+    color:rgb(59, 125, 248);
+}
+.links2{
+    display: flex;
+    
+}
+.links2 li{
+    list-style: none;
+}
+.links2 li a{
+    padding-right:15px;
+    color:rgb(0, 169, 236);
+}
+.links2 li a:hover{
+    color:rgba(0, 169, 236, 0.63);
+}
+#nav{
+    display:none;
+}
+label{
+    display:none;
+}
+@media (max-width:768px){
+    .header{
+        padding-left: 0px;
+
+    }
+    .logo{
+        position: absolute;
+        left: 20px;
+    }
+    .links1{
+        flex-direction: column;
+        
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0px;
+        background-color: white;
+        height: 0;
+        overflow: hidden;          
+        transition: all 0.5s ease;
+        
+
+    }
+    
+    
+    
+    .links1 li a{
+        padding:10px 20px;
+        padding-right: 0px;
+        display: block;
+        transition: all 0.5s ease;
+        
+        
+    }
+    .links1 li:hover a{
+        color:rgb(0, 140, 196);
+        padding-left:30px;
+    }
+    .links1 li:hover{
+        background-color:skyblue;
+    }
+    .links2{
+        display: none;
+    }
+    label{
+        display: block;
+        position: absolute;
+        right: 30px;
+        font-size:25px;
+        color:rgb(0, 158, 211);
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    
+    
+    label:hover{
+        transform: rotate(90deg);
+        color:rgb(51, 71, 78);
+    }
+    input[type="checkbox"]:checked+.links1{
+        height: 168px;
+    }
+    
+    
+    
+    
+}

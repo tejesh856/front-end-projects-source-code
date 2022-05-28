@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    
+   
+   
+    
+}
+.body{
+    position: relative;
+}
+.header{
+    height:60px;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    justify-content: space-around;
+    padding:20px 0px;
+    
+    box-shadow:0 2px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+.header span{
+    color: rgb(81, 175, 212);
+    letter-spacing:3px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform:capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.links{
+    display: flex;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    margin-left:10px;
+    font-weight: bold;
+    letter-spacing:2px;
+}
+.links a:hover{
+    color:rgb(81, 175, 212);
+    
+}
+.main{
+    
+    height: calc(100vh - 60px);
+   width: 100%;
+   background-color: #F1f5f8;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+  
+   
+}
+.main h1{
+    background-color: rgba(0, 0, 0, 0.85);
+    color:white;
+    padding:10px 20px;
+    text-transform: capitalize;
+    border-radius:5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom:20px;
+}
+.main h1 span{
+    color:skyblue;
+}
+input[value="Click Me"]{
+    padding: 10px 30px;
+    border: 1px solid black;
+    background-color:transparent;
+    border-radius:5px;
+    cursor: pointer;
+    font-size:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: bold;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    transition:all 0.5s ease;
+    
+}
+input[value="Click Me"]:hover{
+    background-color:black;
+    color: white;
+}

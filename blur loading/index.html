@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample2.css">
+</head>
+<body>
+    <section class="img"></section>
+    <div class="load">0%</div>
+    <script>
+        var image=document.querySelector('.img');
+        var load=document.querySelector('.load');
+       
+
+        lod=0;
+        let id1=setInterval(blured,30);
+        let id2=setInterval(op,30);
+        
+        function blured(){
+            lod=lod+1;
+            if(lod>=100){
+                clearInterval(id1);
+                
+            }
+            load.innerHTML=lod+'%';
+            image.style.filter=`blur(${calc(100,lod,1)}px)`;
+            
+            
+            
+        }
+        i=1
+        function op(){
+            i=i-0.01;
+            load.style.opacity=`${calc(i,0,0)}`;     
+            
+        }
+        function calc(a,b,c){
+            return a-b+c;
+            
+        }
+
+        
+    </script>
+    
+</body>
+</html>

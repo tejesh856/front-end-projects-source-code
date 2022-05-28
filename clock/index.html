@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <div class="circle" id="sc" style="--clr:#04fc43;"><i></i></div>
+            <div class="circle circle1" id="mn" style="--clr:#fee800;"><i></i></div>
+            <div class="circle circle2" id="hr" style="--clr:#ff2972;"><i></i></div>
+
+
+
+            <span style="--i:1"><b>1</b></span>
+            <span style="--i:2"><b>2</b></span>
+            <span style="--i:3"><b>3</b></span>
+            <span style="--i:4"><b>4</b></span>
+            <span style="--i:5"><b>5</b></span>
+            <span style="--i:6"><b>6</b></span>
+            <span style="--i:7"><b>7</b></span>
+            <span style="--i:8"><b>8</b></span>
+            <span style="--i:9"><b>9</b></span>
+            <span style="--i:10"><b>10</b></span>
+            <span style="--i:11"><b>11</b></span>
+            <span style="--i:12"><b>12</b></span>
+        </div>
+    </div>
+    <div class="digital">
+        <div class="time hours" id="hour">00</div>
+        <div class="time minutes" id="minute">00</div>
+        <div class="time seconds" id="second">00</div>
+        <div class="time timemeridian" id="time">00</div>
+    </div>
+    <script>
+
+        let hr=document.querySelector('#hr');
+        let mn=document.querySelector('#mn');
+        let sc=document.querySelector('#sc');
+
+        let hou=document.querySelector('#hour');
+        let min=document.querySelector('#minute');
+        let sec=document.querySelector('#second');
+        let meridian=document.querySelector('#time');
+
+        setInterval(() => {
+            let day=new Date();
+            let hh=day.getHours()*30;
+            let mm=day.getMinutes()*6;
+            let ss=day.getSeconds()*6;
+
+            hr.style.transform=`rotate(${hh+(mm/12)}deg)`;
+            mn.style.transform=`rotate(${mm}deg)`;
+            sc.style.transform=`rotate(${ss}deg)`;
+
+            let d=new Date();
+            let h=d.getHours();
+            let m=d.getMinutes();
+            let s=d.getSeconds();
+
+            if(s<10){
+                se='0'+s;
+            }
+            else{
+                se=s;
+            }
+            if(h>=0 && h<=12){
+                meridian.innerHTML='AM';
+
+            }
+            else{
+                meridian.innerHTML='PM';
+            }
+            if(h<10){
+                he='0'+h;
+            }
+            else{
+                he=h;
+            }
+            if(m<10){
+                mi='0'+m;
+            }
+            else{
+                mi=m;
+            }
+
+            
+
+            
+            hou.innerHTML=he;
+            min.innerHTML=mi;
+            sec.innerHTML=se;
+
+
+
+
+
+        },500);
+
+
+
+
+
+
+
+        
+           
+        
+        
+        
+    </script>
+</body>
+</html>
