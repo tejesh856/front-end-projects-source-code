@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:#F1f5f8;
+}
+section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    margin-bottom: 40px;
+}
+.title h2{
+    color: #c59d5f;
+    letter-spacing: 2px;
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-size:40px;
+
+}
+.questions{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.questions .layer{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.questions .layer .ques1,.questions .layer .ques2,.questions .layer .ques3{
+    width: 550px;
+    max-width: 90vw;
+    margin-top: 20px;
+    background-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding:20px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
+    border-radius:10px;
+
+}
+hr{
+    margin:10px 0px;
+    display: none;
+}
+.questions .layer .ques1 .q1,.questions .layer .ques2 .q2,.questions .layer .ques3 .q3{
+    display: flex;
+    justify-content: space-between;
+
+}
+.questions .layer .ques1 .c1 span,.questions .layer .ques2 .c2 span,.questions .layer .ques3 .c3 span{
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: rgb(46, 117, 134);
+    opacity: 1;
+   
+}
+.questions .layer .ques1 .q1 span,.questions .layer .ques2 .q2 span,.questions .layer .ques3 .q3 span{
+    opacity: 0.8;
+    font-size:18px;
+}
+.questions .layer .ques1 .q1 button,.questions .layer .ques2 .q2 button,.questions .layer .ques3 .q3 button{
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    color: #c59d5f;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.questions .layer .ques1 .q1 button:hover,.questions .layer .ques2 .q2 button:hover,.questions .layer .ques3 .q3 button:hover{
+    transform: rotate(90deg);
+}
+.questions .layer .ques1 .c1,.questions .layer .ques2 .c2,.questions .layer .ques3 .c3{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}

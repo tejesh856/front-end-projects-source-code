@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    
+    background-color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    
+    
+    
+    
+    
+}
+
+
+.video{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.836);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+
+   
+    
+}
+
+video{
+   
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+.title{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.title h1{
+    position:relative;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    font-size:50px;
+    
+    white-space:nowrap;
+    
+}
+
+button{
+    position: absolute;
+    bottom:100px;
+    left:100px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding:10px 0px;
+
+}
+.play{
+    padding:10px 20px;
+    color: rgb(85, 174, 212);
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    font-size: 16px;
+}
+.pause{
+    padding:10px 20px;
+    color: rgb(78, 174, 212);
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    font-size:16px;
+}
+.slider{
+    width:79px;
+    height:39px;
+    background-color:rgb(84, 125, 247);
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.slide-pause{
+    left: 55%;
+}
+@media (max-width:910px){
+    .title h1{
+        font-size:40px;
+    }
+}
+@media (max-width:350px){
+    .title h1{
+        font-size:20px;
+    }
+   .play{
+       padding:5px 10px;
+       font-size: 14px;
+       
+   }
+   .pause{
+       padding:5px 10px;
+       font-size: 14px;
+      
+   }
+   .slider{
+       width: 54px;
+       height: 37px;
+       
+   }
+   button{
+       bottom:50px;
+       left: 50px;
+   }
+}
